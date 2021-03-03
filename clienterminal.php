@@ -6,6 +6,7 @@
         $sql=sql("SELECT * FROM clients WHERE id=$id");
         $row=mysql_fetch_array($sql);
         echo'
+        <a href="clients.php"><button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></button></a>
         <div class="container">
             <div class="row" style="padding-top:100px">
                 <div class="col">
@@ -34,6 +35,7 @@
                         </h5>
                     </div>
                 </div>  
+                <hr style="margin-top:-5px;margin-bottom:3px"/>
                 <div class="row">
                     <div class="col-4">
                         <h5>
@@ -46,6 +48,7 @@
                         </h5>
                     </div>
                 </div> 
+                <hr style="margin-top:-5px;margin-bottom:3px"/>
                 <div class="row">
                     <div class="col-4">
                         <h5>
@@ -58,6 +61,7 @@
                         </h5>
                     </div>
                 </div> 
+                <hr style="margin-top:-5px;margin-bottom:3px"/>
                 <div class="row">
                     <div class="col-4">
                         <h5>
@@ -70,6 +74,7 @@
                         </h5>
                     </div>
                 </div> 
+                <hr style="margin-top:-5px;margin-bottom:3px"/>
                 <div class="row">
                     <div class="col-4">
                         <h5>
@@ -85,13 +90,13 @@
             </div>
             <div class="row" style="padding-top:10px">
                 <div class="col-2">
-                    <a href="clients.php"><button class="btn btn-outline-primary"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Doładuj konto</button></a>
+                    <a href="deposit.php?client='.$id.'"><button class="btn btn-outline-success"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Doładuj konto</button></a>
                 </div>
                 <div class="col-2">
-                    <a href="clients.php"><button class="btn btn-outline-primary"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> Zrób przelew</button></a>
+                    <a href="transfer.php"><button class="btn btn-outline-primary"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> Zrób przelew</button></a>
                 </div>
                 <div class="col-2">
-                    <a href="clients.php"><button class="btn btn-outline-primary"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span> Wypłać pieniądze</button></a>
+                    <a href="payout.php?client='.$id.'"><button class="btn btn-outline-danger"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span> Wypłać pieniądze</button></a>
             </div>
             </div> 
         </div>

@@ -2,6 +2,7 @@
     require_once("header.php");
     $sql=sql("SELECT * FROM clients");
     echo '
+        <a href="index.php"><button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></button></a>
         <div class="container">
             <div class="row" style="padding-top:100px">
                 <div class="col">
