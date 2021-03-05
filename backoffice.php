@@ -13,7 +13,7 @@
             </div>      
             <div class="row">
                 <div class="col">
-                    <a href="addclient.php?&m=tk"><button class="btn btn-outline-success">Dodaj klienta</button></a>
+                    <a href="addclient.php?&m=tb"><button class="btn btn-outline-success">Dodaj klienta</button></a>
                 </div>
             </div>   
             <div class="row" style="padding-top:50px">

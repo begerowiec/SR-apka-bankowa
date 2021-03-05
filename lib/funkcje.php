@@ -91,6 +91,18 @@ function sql($string)
   or die(alert("Problem z połączeniem do bazy danych - skontaktuj sie z administratorem",'','alert-danger'));
    return $result;
 }
+function generateaccnumber()
+{
+    $control=rand (10, 99 );
+    $rand=rand (10, 99 );
+    $bank = array(1010, 1020 , 1030, 1050, 1060, 1090,1140, 1240, 1320, 1470, 1870, 1940, 1950, 2490);
+    $randbank=$bank[array_rand($bank, 1)];
+    $time=time();
+    $date=date('Ymd');
+    $accnumber=$control.$randbank.$time.$date.$rand;
+    echo $accnumber;
+    
+}
 function alert($tyul='SUKCES !!!',$tresc='Dane zostały zapisane.',$typ='alert-success',$animate=1)
 {
 //alert-success

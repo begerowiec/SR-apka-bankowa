@@ -7,8 +7,8 @@ $pol=con();
     <script src="js/bootstrap.js"></script>
     <title>Aplikacja Bankowa</title>
 </head>
-<body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<body style="background-color:#E7E7E7">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="index.php" style="'Times New Roman', serif"><img src="img/logo.png" style="width:40px;" class="d-inline-block align-top">SRBankier2000</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
