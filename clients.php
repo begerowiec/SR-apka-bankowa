@@ -17,7 +17,7 @@
             echo '
                 <div class="row" style="padding-top:10px"> 
                     <div class="col">
-                        <a href="clienterminal.php?id='.$row{"id"}.'"><button class="btn btn-outline-primary">'.$row{"Name"}.' '.$row{"Surname"}.'</button></a>
+                        <a href="clienterminal.php?id='.$row{"id"}.'&m=tk"><button class="btn btn-outline-primary">'.$row{"Name"}.' '.$row{"Surname"}.'</button></a>
                     </div>
                 </div>
             ';

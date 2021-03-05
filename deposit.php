@@ -16,7 +16,10 @@
     </div>    
       <fieldset>
             <div class="row">
-              <div class="col-3">
+              <div class="input-group col-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">PLN</span>
+                </div>    
                 <input step="0.01"  min="0.00" type="number" name="kwota" id="kwota" class="form-control input-lg date" placeholder="Wpisz kwotę" required data-fv-notempty/>
                 <input type="hidden" name="id" id="id" value="<?php echo $id; ?>"/>
               </div>

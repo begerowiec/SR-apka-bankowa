@@ -12,12 +12,12 @@ require_once("header.php");
     </div>
     <div class="row" style="padding-top:10px"> 
         <div class="col">
-            <a href="clients.php"><button class="btn btn-outline-primary"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Terminal klienta</button></a>
+            <a href="clients.php?m=tk"><button class="btn btn-outline-primary"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Terminal klienta</button></a>
             </div>
         </div>
     <div class="row" style="padding-top:10px">
         <div class="col">
-            <a href="backoffice.php"><button class="btn btn-outline-primary"><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Terminal bankiera</button></a>
+            <a href="backoffice.php?m=tb"><button class="btn btn-outline-primary"><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Terminal bankiera</button></a>
         </div>
     </div>
 </div>

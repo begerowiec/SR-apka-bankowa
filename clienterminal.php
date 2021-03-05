@@ -16,10 +16,13 @@
                 </div>
             </div>  
             <div class="row" style="padding-top:10px">
-                <div class="col">
+                <div class="col-5">
                     <h4>
-                        Dane konta <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                        Dane konta <span class="glyphicon glyphicon-user" aria-hidden="true"></span> 
                     </h4>
+                </div>
+                <div class="col">
+                    <button onClick="window.location.reload();" class="btn btn-outline-dark"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> </button>
                 </div>
             </div>  
             <div style="border:1px solid grey;width:50%">
@@ -90,14 +93,19 @@
             </div>
             <div class="row" style="padding-top:10px">
                 <div class="col-2">
-                    <a href="deposit.php?client='.$id.'"><button class="btn btn-outline-success"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Doładuj konto</button></a>
+                    <a href="deposit.php?client='.$id.'&m=tk"><button class="btn btn-outline-success"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Doładuj konto</button></a>
                 </div>
                 <div class="col-2">
-                    <a href="transfer.php"><button class="btn btn-outline-primary"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> Zrób przelew</button></a>
+                    <a href="transfer.php?client='.$id.'&m=tk"><button class="btn btn-outline-primary"><span class="glyphicon glyphicon-retweet" aria-hidden="true"></span> Zrób przelew</button></a>
                 </div>
                 <div class="col-2">
-                    <a href="payout.php?client='.$id.'"><button class="btn btn-outline-danger"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span> Wypłać pieniądze</button></a>
-            </div>
+                    <a href="payout.php?client='.$id.'&m=tk"><button class="btn btn-outline-danger"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span> Wypłać pieniądze</button></a>
+                </div>
+            </div> 
+            <div class="row" style="padding-top:10px">
+                <div class="col-6">
+                    <button type="button" class="btn btn-outline-info" style="width:102%"><span class="glyphicon glyphicon-list" aria-hidden="true"></span>  Historia tranzacji</button>
+                </div>
             </div> 
         </div>
         ';
