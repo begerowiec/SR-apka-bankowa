@@ -1,7 +1,7 @@
 <?php
     require_once("header.php");
 ?>
-<a href="index.php"><button class="btn btn-danger"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></button></a>
+<a href="backoffice.php?m=tb"><button class="btn btn-danger"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></button></a>
 <div class="container">
     <div class="row" style="padding-top:100px">
         <div class="col">
@@ -41,7 +41,7 @@
                     Nr konta
                 </div>
                 <div class="col-3" >
-                    <input type="text" name="accnumber" id="accnumber" class="form-control input-lg date" value="<?php generateaccnumber()?>"  required data-fv-notempty disabled/>
+                    <input type="text" name="accnumber" id="accnumber" class="form-control input-lg date" value="<?php generateaccnumber()?>" readonly="readonly" required data-fv-notempty/>
                 </div>
             </div>
             <div class="row" style="padding-top:10px">

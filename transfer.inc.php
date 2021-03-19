@@ -14,53 +14,53 @@
         if($newbalance<0)
         {
             echo'
-            <div class="container">
-                <div class="row" style="padding-top:100px">
-                    <div class="col">
-                        <h2 style="color:red">
-                            Brak środków na wykonanie tej operacji!
-                        </h2>
+                <div class="container">
+                    <div class="row" style="padding-top:100px">
+                        <div class="col">
+                            <h2 style="color:red">
+                                Brak środków na wykonanie tej operacji!
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h6>
+                            Za chwilę zostaniesz przeniesiony na swój terminal.
+                            </h6>
+                        </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <h6>
-                           Za chwilę zostaniesz przeniesiony na swój terminal.
-                        </h6>
-                    </div>
-                </div>
-            </div>
             ';
         }
         else
         {
-        echo'
-            <div class="container">
-                <div class="row" style="padding-top:100px">
-                    <div class="col">
-                        <h2 style="color:red">
-                            Wykonano przelew na kwotę: '.$kwota.' PLN  <br> Odbiorca: '.$row2{"Name"}.' '.$row2{"Surname"}.'
-                        </h2>
+            echo'
+                <div class="container">
+                    <div class="row" style="padding-top:100px">
+                        <div class="col">
+                            <h2 style="color:red">
+                                Wykonano przelew na kwotę: '.$kwota.' PLN  <br> Odbiorca: '.$row2{"Name"}.' '.$row2{"Surname"}.'
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h6>
+                            Za chwilę zostaniesz przeniesiony na swój terminal.
+                            </h6>
+                        </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <h6>
-                        Za chwilę zostaniesz przeniesiony na swój terminal.
-                        </h6>
-                    </div>
-                </div>
-            </div>
-        ';
-        $sql=sql("UPDATE clients SET balance = $newbalance WHERE id=$client");
-        $sql=sql("UPDATE clients SET balance = $newdepo WHERE id=$odbiorca");
+            ';
+            $sql=sql("UPDATE clients SET balance = $newbalance WHERE id=$client");
+            $sql=sql("UPDATE clients SET balance = $newdepo WHERE id=$odbiorca");
+            $tanhis=sql("INSERT INTO tranhistory (user_id, recipient_id, TType, Amount, Balance_user, Balance_recipient) VALUES ($client, $odbiorca, 'P', $kwota, $newbalance, $newdepo)");
         }
         
     }
     
 ?>
 <script>
-var num = <?php echo $client ?>; 
-setTimeout(function(){location.href="clienterminal.php?id="+num+""} , 5000);  
-
+    var num = <?php echo $client ?>; 
+    setTimeout(function(){location.href="clienterminal.php?id="+num+""} , 5000);  
 </script>

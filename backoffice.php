@@ -25,15 +25,15 @@
             </div>     
     ';
     while($row=mysql_fetch_array($sql))
-        {
-            echo '
-                <div class="row" style="padding-top:10px"> 
-                    <div class="col">
-                        <button onClick="decision('.$row{"id"}.',';echo "'".$row{'Name'}."'"; echo',';echo "'".$row{'Surname'}."'"; echo')" class="btn btn-outline-warning">'.$row{"Name"}.' '.$row{"Surname"}.'</button>
-                    </div>
+    {
+        echo '
+            <div class="row" style="padding-top:10px"> 
+                <div class="col">
+                    <button onClick="decision('.$row{"id"}.',';echo "'".$row{'Name'}."'"; echo',';echo "'".$row{'Surname'}."'"; echo')" class="btn btn-outline-warning">'.$row{"Name"}.' '.$row{"Surname"}.'</button>
                 </div>
-            ';
-        }
+            </div>
+        ';
+    }
 
 
 ?>

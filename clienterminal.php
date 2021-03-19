@@ -6,7 +6,7 @@
         $sql=sql("SELECT * FROM clients WHERE id=$id");
         $row=mysql_fetch_array($sql);
         echo'
-        <a href="clients.php"><button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></button></a>
+        <a href="clients.php?m=tk"><button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></button></a>
         <div class="container">
             <div class="row" style="padding-top:100px">
                 <div class="col">
@@ -104,7 +104,7 @@
             </div> 
             <div class="row" style="padding-top:10px">
                 <div class="col-6">
-                    <button type="button" class="btn btn-outline-info" style="width:102%"><span class="glyphicon glyphicon-list" aria-hidden="true"></span>  Historia tranzacji</button>
+                    <a href="tranhistory.php?client='.$id.'&m=tk"><button type="button" class="btn btn-outline-info" style="width:102%"><span class="glyphicon glyphicon-list" aria-hidden="true"></span>  Historia transakcji</button></a>
                 </div>
             </div> 
         </div>

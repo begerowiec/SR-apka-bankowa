@@ -8,6 +8,7 @@
         $row=mysql_fetch_array($sql);
         $newbalance=$row{"balance"}+$kwota;
         $sql=sql("UPDATE clients SET balance = $newbalance WHERE id=$client");
+        $tanhis=sql("INSERT INTO tranhistory (user_id, TType, Amount, Balance_user) VALUES ($client, 'D', $kwota, $newbalance)");
     }
     echo'
         <div class="container">
@@ -27,9 +28,8 @@
             </div>
         </div>
     ';
-    ?>
-    <script>
+?>
+<script>
     var num = <?php echo $client ?>; 
     setTimeout(function(){location.href="clienterminal.php?id="+num+""} , 3000);  
-    
-    </script>
+</script>
