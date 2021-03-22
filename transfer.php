@@ -18,17 +18,7 @@
         <fieldset>
             <div class="row">
                 <div class="col-4" >
-                    <select class="form-control" name="odbiorca">';
-                        <option disabled selected hidden>Odbiorca przelewu</option>';    
-                        <?php
-                            while($row=mysql_fetch_array($sql))
-                            {
-                                echo'
-                                    <option value='.$row{"id"}.'>'.$row{"Name"}.' '.$row{"Surname"}.' '.$row{"account_number"}.'</option> 
-                                ';
-                            }                        
-                        ?>
-                    </select>
+                    <input minlength="26" maxlength="26" type="text" pattern="[0-9]*" name="odbiorca" id="odbiorca" class="form-control input-lg date"  placeholder="Numer konta" required data-fv-notempty/>
                 </div>
             </div>        
             <div class="row" style="padding-top:10px">
