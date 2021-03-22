@@ -15,4 +15,4 @@ Za pomocą Terminalu Bankowego można:
 Dane kliektów przychowywane są w bazie danych, z którą sieciowo komunikuje się aplikacja. Na bazę danych składają się dwie tabele:
 -clients (posiada informacje o klientach [id, imię, nazwisko, PESEL, numer konta, stan konta]),
 -tranhistory (posiada informacje o transakcjach).
-
+Plik bazy danych można znaleść w folderze database
